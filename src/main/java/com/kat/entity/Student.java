@@ -1,5 +1,8 @@
 package com.kat.entity;
 
+import lombok.Getter;
+
+@Getter
 public class Student {
 
     private int id;
@@ -35,5 +38,6 @@ public class Student {
     public void updateFeesPaid (int fees) {
         feesPaid += fees;
     }
+
 
 }
