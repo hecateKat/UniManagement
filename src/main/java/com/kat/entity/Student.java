@@ -16,12 +16,12 @@ public class Student {
        @param grade students grade
        */
 
-    public Student(int id, String name, int grade, int feesPaid, int feesTotal) {
+    public Student(int id, String name, int grade) {
         this.id = id;
         this.name = name;
         this.grade = grade;
-        this.feesPaid = 0;
-        this.feesTotal = 30000;
+        feesPaid = 0;
+        feesTotal = 30000;
     }
 
     /** @param grade new students grade
