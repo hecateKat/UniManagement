@@ -1,4 +1,4 @@
-package entity;
+package com.kat.entity;
 
 import java.util.List;
 
