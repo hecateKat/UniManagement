@@ -7,7 +7,8 @@ public class Teacher {
 
     private int id;
     private String name;
-    private double salary;
+    private int salary;
+    private int salaryEarned;
 
 
     /**
@@ -16,17 +17,27 @@ public class Teacher {
      * @param salary Teachers salary
      */
 
-    public Teacher(int id, String name, double salary) {
+    public Teacher(int id, String name, int salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
+        this.salaryEarned = 0;
     }
 
     /**
      * @param salary sets new salary
      */
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    /**
+     *
+     * @param salary
+     */
+    public void receiveSalary(int salary){
+        salaryEarned+= salary;
+        School.updateTotalMoneySpent(salary);
     }
 }

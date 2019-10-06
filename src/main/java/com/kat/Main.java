@@ -30,8 +30,17 @@ public class Main {
         studentsList.add(cezary);
         studentsList.add(aleksander);
 
+        michal.payFees(5000);
+        aleksander.payFees(6000);
+
+
 
         School hightSchool = new School(teachersList, studentsList);
-        System.out.println(hightSchool.getTotalEarnedMoney());
+        System.out.println("High School earned:" + hightSchool.getTotalMoneyEarned());
+
+        System.out.println("School paying salary");
+        kondrat.receiveSalary(kondrat.getSalary());
+        System.out.println("Kondrats salary:" + hightSchool.getTotalMoneySpent());
+
     }
 }

@@ -9,8 +9,8 @@ public class School {
 
     private List<Teacher> teachers;
     private List<Student> students;
-    private int totalEarnedMoney;
-    private int allSpendMoney;
+    private static int totalEarnedMoney;
+    private static int allSpendMoney;
 
     /**
      * @param teachers list of teachers
@@ -24,28 +24,44 @@ public class School {
         allSpendMoney = 0;
     }
 
-    public void addTeacher (Teacher teacher){
+    public void addTeacher(Teacher teacher) {
         teachers.add(teacher);
     }
 
-    public void addStudent (Student student){
+    public void addStudent(Student student) {
         students.add(student);
     }
 
     /**
-     * @param earnedMoney earned money that is add to total money that school got
+     * @return the total money earned by the school.
      */
-
-    public void updateTotalEarnedMoney(int earnedMoney) {
-        totalEarnedMoney += earnedMoney;
+    public int getTotalMoneyEarned() {
+        return totalEarnedMoney;
     }
 
+    /**
+     * Adds the total money earned by the school.
+     *
+     * @param MoneyEarned money that is supposed to be  added.
+     */
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
+        totalEarnedMoney += MoneyEarned;
+    }
 
     /**
-     * @param spendMoney spend money that is add to total money that school spend
+     * @return the total money spent by the school.
      */
+    public int getTotalMoneySpent() {
+        return allSpendMoney;
+    }
 
-    public void updateAllSpendMoney(int spendMoney) {
-        totalEarnedMoney -= spendMoney;
+    /**
+     * update the money that is spent by the school which
+     * is the salary given by the school to its teachers.
+     *
+     * @param moneySpent the money spent by school.
+     */
+    public static void updateTotalMoneySpent(int moneySpent) {
+        allSpendMoney -= moneySpent;
     }
 }
